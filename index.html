@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <script src="js/config.js"></script>
+    <title>Japanese Animations - Faizan Ahmed</title>
   </head>
   <body>
     <div id="mobile">
@@ -21,7 +22,7 @@
         </div>
       </section>
       <section id="overview">
-        <div class="section-headline">Synopsis overview</div>
+        <div class="section-headline"></div>
         <div class="container">
           <p class="desc">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
@@ -30,44 +31,51 @@
             natus officia vero?
           </p>
           <h3 class="title">How to participate</h3>
-          <div class="boxes">
-            <div class="box">
-              <span class="number">01</span>
-              <span class="caption"> purchase menu item </span>
+          <div class="paymentmethods boxes">
+            <div class="box method1">
+              <div class="img">
+                <img src="" alt="" class="method-img" />
+              </div>
+              <span class="number"></span>
+              <span class="caption"></span>
             </div>
-            <div class="box">
-              <span class="number">02</span>
-              <span class="caption">Scan the QR code</span>
+            <div class="box method2">
+              <div class="img">
+                <img src="" alt="" class="method-img" />
+              </div>
+              <span class="number"></span>
+              <span class="caption"></span>
             </div>
-            <div class="box">
-              <span class="number">03</span>
-              <span class="caption"
-                >Come back after each week for new content!</span
-              >
+            <div class="box method3">
+              <div class="img">
+                <img src="" alt="" class="method-img" />
+              </div>
+              <span class="number"></span>
+              <span class="caption"></span>
             </div>
           </div>
         </div>
       </section>
 
       <section id="manga-anime">
-        <div class="section-headline">manga & anime</div>
+        <div class="section-headline"></div>
         <div class="container">
           <div class="week-boxes">
             <div class="box">
-              <img src="mcdonalds-logo.png" alt="" />
+              <img src="" alt="" />
               <span class="caption">week 1</span>
             </div>
             <div class="box">
-              <img src="new logo.png" class="new-logo" alt="" />
-              <img src="mcdonalds-logo.png" alt="" />
+              <img src="" class="new-logo" alt="" />
+              <img src="" alt="" />
               <span class="caption">week 2</span>
             </div>
             <div class="box">
-              <img src="mcdonalds-logo.png" alt="" />
+              <img src="" alt="" />
               <span class="caption">week 3</span>
             </div>
             <div class="box">
-              <img src="mcdonalds-logo.png" alt="" />
+              <img src="" alt="" />
               <span class="caption">week 4</span>
             </div>
           </div>
@@ -97,7 +105,7 @@
         </div>
       </section>
       <section id="characters">
-        <div class="section-headline">This week's characters</div>
+        <div class="section-headline"></div>
         <div class="container">
           <div class="content">
             <div class="card">
@@ -117,4 +125,46 @@
       </section>
     </div>
   </body>
+  <script>
+    // set titles
+    document.querySelector("#overview .section-headline").innerHTML =
+      AnimeQA["section-titles"]["overview"];
+    document.querySelector("#manga-anime .section-headline").innerHTML =
+      AnimeQA["section-titles"]["manga-anime"];
+    document.querySelector("#characters .section-headline").innerHTML =
+      AnimeQA["section-titles"]["characters"];
+
+    // set payment methods
+
+    // titles
+    document.querySelector(
+      "#overview .paymentmethods .method1 .caption"
+    ).innerHTML = AnimeQA["participation-methods"]["method1"]["name"];
+    document.querySelector(
+      "#overview .paymentmethods .method2 .caption"
+    ).innerHTML = AnimeQA["participation-methods"]["method2"]["name"];
+    document.querySelector(
+      "#overview .paymentmethods .method3 .caption"
+    ).innerHTML = AnimeQA["participation-methods"]["method3"]["name"];
+
+    // numbers
+
+    document.querySelector("#overview .paymentmethods .method1 .number").innerHTML =
+      AnimeQA["participation-methods"]["method1"]["id"];
+    document.querySelector("#overview .paymentmethods .method2 .number").innerHTML =
+      AnimeQA["participation-methods"]["method2"]["id"];
+    document.querySelector("#overview .paymentmethods .method3 .number").innerHTML =
+      AnimeQA["participation-methods"]["method3"]["id"];
+
+     
+    // images
+    document.querySelector("#overview .paymentmethods .method1 .method-img").src =
+      AnimeQA["participation-methods"]["method1"]["img"];
+    document.querySelector("#overview .paymentmethods .method2 .method-img").src =
+      AnimeQA["participation-methods"]["method2"]["img"];
+    document.querySelector("#overview .paymentmethods .method3 .method-img").src =
+      AnimeQA["participation-methods"]["method3"]["img"];
+
+    // set weeks images
+  </script>
 </html>
