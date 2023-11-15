@@ -82,21 +82,21 @@ const AnimeQA = {
     method1: {
       id: "01",
       name: "purchase menu items",
-      img: "/images/mcdonalds-logo.png",
+      img: "img/mcdonalds-logo.png",
     },
     method2: {
       id: "02",
       name: "scan the QR code",
-      img: "/images/mcdonalds-logo.png",
+      img: "img/mcdonalds-logo.png",
     },
     method3: {
       id: "03",
       name: "come back each week for new content!",
-      img: "/images/mcdonalds-logo.png",
+      img: "img/mcdonalds-logo.png",
     },
   },
   "img-utils": {
-    logo: "/images/mcdonalds-logo.png",
+    logo: "img/mcdonalds-logo.png",
     new: "",
   },
 };
